@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'rest_framework_swagger',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,10 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.eggs.Loader',
+)
 
 WSGI_APPLICATION = 'webcalc.wsgi.application'
 
@@ -128,3 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+APP_VERSION = '0.0.1'
+APP_NAME = 'webcalc'
+APP_DESCRIPTION = 'A REST API for Web Calc'
